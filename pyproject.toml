@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "low-level-design"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = ["ruff>=0.12.1", "ty>=0.0.1a12"]
+
+[project.scripts]
+test_active_elevator = "elevator.active.main:main"
+test_passive_elevator = "elevator.passive.main:main"
+
+[tool.hatch.build]
+sources = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/elevator"]
+
+[tool.ruff]
+line-length = 100
