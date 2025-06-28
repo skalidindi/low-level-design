@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "low-level-design"
 version = "0.1.0"
-description = "Add your description here"
+description = "Practice low level design in Python"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
@@ -17,11 +17,12 @@ dev = ["ruff>=0.12.1", "ty>=0.0.1a12"]
 test_active_elevator = "elevator.active.main:main"
 test_passive_elevator = "elevator.passive.main:main"
 
+[project.urls]
+Homepage = "https://github.com/skalidindi/low-level-design"
+Repository = "https://github.com/skalidindi/low-level-design"
+
 [tool.hatch.build]
 sources = ["src"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/elevator"]
-
-[tool.ruff]
-line-length = 100
